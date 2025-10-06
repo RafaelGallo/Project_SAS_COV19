@@ -3,5 +3,5 @@ djangorestframework
 pandas
 requests
 pandas==2.2.2
-tqdm==4.66.1
+tqdm==4.66.3
 numpy==1.26.4
