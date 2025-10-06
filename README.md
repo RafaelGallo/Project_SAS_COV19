@@ -1,2 +1,2 @@
-# Project_SAS_COV19
-Projeto ciencias de dados sobe a Covid19 projetos ligado ETL, Análise de dados, Modelagem preditiva, NLP
+# SaS_Cov19_project
+Projeto análise estatístico sobe covid19 
