@@ -1,4 +1,4 @@
-# 🧬 Project SAS-COV19 — COVID-19 Data Analytics & Forecast Dashboard  
+# 🧬 Project SAS-COV19 — COVID-19 Data Analytics & Forecast Dashboard
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-orange)
@@ -10,222 +10,245 @@
 
 ![](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/img/log.jpg?raw=true)
 
-## 📘 **Descrição do Projeto**
+## 📘 **Project Overview**
 
-O **Project SAS-COV19** é um sistema analítico completo para **monitoramento, análise e previsão da pandemia de COVID-19 no Brasil (2020–2025)**.  
+**Project SAS-COV19** is a complete analytical system for **monitoring, analyzing, and forecasting the COVID-19 pandemic in Brazil (2020–2025)**.
 
-O projeto realiza:
-- Extração automática e integração de bases públicas ([covid.saude.gov.br](https://covid.saude.gov.br/));
-- Limpeza e unificação via pipeline **ETL** automatizado (`main.py`);
-- Cálculo de **médias móveis**, indicadores epidemiológicos e regionais;
-- Identificação de **ondas pandêmicas** e fases de endemia;
-- Modelagem preditiva com **Regressão Polinomial e Logística**;
-- Visualização interativa via **Streamlit Dashboard**.
+The project performs:
 
-O objetivo é fornecer uma visão exploratória e preditiva do comportamento da pandemia no Brasil e em suas regiões, com foco em políticas públicas, análises epidemiológicas e estudos de tendência.
+* Automatic extraction and integration of public datasets ([covid.saude.gov.br](https://covid.saude.gov.br/));
+* Cleaning and consolidation through an automated **ETL pipeline** (`main.py`);
+* Calculation of **moving averages** and epidemiological indicators;
+* Identification of **pandemic waves** and endemic transition phases;
+* Predictive modeling using **Polynomial and Logistic Regression**;
+* Interactive visualization through a **Streamlit Dashboard**.
 
-## 🧩 **Arquitetura do Projeto**
+The goal is to provide an exploratory and predictive view of the pandemic’s behavior in Brazil and its regions — supporting public policy, epidemiological research, and trend analysis.
 
-````
+## 🌍 Extensions & Related Projects
+
+As part of the **analytical ecosystem of Project SAS-COV19**, new modules and complementary studies are being developed, focusing on **time series, vaccination data, adverse effects, and natural language processing (NLP)** related to the global pandemic.
+
+### 🧠 **Expansion Projects**
+
+| Category                                           | Description                                                                                   | Dataset Source                                                                                                                       | Project Folder |
+| -------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | -------------- |
+| 💉 **COVID-19 Post Vaccination Statewide Stats**   | Time series analysis and modeling of post-vaccination data (cases, hospitalizations, deaths). | [Kaggle Dataset](https://www.kaggle.com/datasets/tdison/covid19-post-vaccination-statewide-stats)                                    |                |
+| 🧬 **COVID-19 Vaccine Adverse Reactions (World)**  | Temporal study of vaccine adverse reactions by country, age group, and manufacturer.          | [Kaggle Dataset](https://www.kaggle.com/datasets/ayushggarg/covid19-vaccine-adverse-reactions)                                       |                |
+| 🧫 **COVID-19 Vaccination Effects (Impact Study)** | Comparative analysis between vaccination rates and epidemiological indicators.                | [Kaggle Dataset](https://www.kaggle.com/datasets/telikaramu/covid-19-vaccination-effects)                                            |                |
+| 🏙️ **COVID-19 Vaccination in Tiered Cities**      | Time series of vaccination data in cities with different infrastructure levels.               | [Kaggle Dataset](https://www.kaggle.com/datasets/achintsoni/covid19-vaccination-data-for-different-tier-cities)                      |                |
+| 📰 **COVID-19 Fake News Detection (NLP)**          | Automatic classification of misinformation using BERT and LLM-based models.                   | [Kaggle Dataset](https://www.kaggle.com/datasets/elvinagammed/covid19-fake-news-dataset-nlp/code?datasetId=1207011&sortBy=voteCount) |                |
+| 🐦 **Global COVID-19 X (Twitter) Analysis (NLP)**  | Sentiment, topic, and fake news detection in global COVID-19 tweets.                          | [Kaggle Dataset](https://www.kaggle.com/datasets/rohitashchandra/global-covid19-twitter-dataset?select=Brazil.csv)                   |                |
+
+> 🔗 These modules are part of the **“SAS-COV19 Global Analysis”** series, integrating epidemiological, behavioral, and media data to understand the direct and indirect impacts of the pandemic worldwide.
+
+## 🌐 Next Steps
+
+🚧 **In development:**
+
+* LSTM and Prophet models for vaccination and adverse reaction time series forecasting.
+* Dedicated Streamlit dashboards for each module (Vaccination, Reactions, Fake News, Twitter NLP).
+* Integration with international databases (OWID, WHO, Kaggle).
+* Unified repository: **SAS-COV19 Global Analytics Suite**.
+
+## 🧩 **Project Architecture**
+
+```
 Project_SAS_COV19/
 │
-├── app/               # Aplicação Streamlit (dashboard)
-├── base/              # Funções base e utilitários de data processing
-├── data/              # Dados brutos e tratados
-├── docker/            # Arquivos de containerização
-├── ETL/               # Scripts de extração, transformação e carga
-├── img/               # Gráficos gerados para documentação
-├── input/             # Dados de entrada (csv, json, etc.)
-├── models/            # Modelos de previsão e machine learning
-├── notebook/          # Jupyter Notebooks de análise exploratória
-├── output/            # Resultados e gráficos processados
-├── py/                # Scripts Python auxiliares
-├── src/               # Código-fonte principal
+├── app/               # Streamlit application (dashboard)
+├── base/              # Base functions and data processing utilities
+├── data/              # Raw and processed data
+├── docker/            # Containerization files
+├── ETL/               # Extraction, Transformation, and Load scripts
+├── img/               # Generated charts and documentation images
+├── input/             # Input datasets (csv, json, etc.)
+├── models/            # Forecasting and ML models
+├── notebook/          # Exploratory Jupyter notebooks
+├── output/            # Processed outputs and visualizations
+├── py/                # Auxiliary Python scripts
+├── src/               # Core source code
 │
-├── main.py            # Script principal de execução (ETL completo)
-├── models.py          # Modelos de regressão e previsões
-├── save_to_sql.py     # Exportação dos resultados para banco SQL
-├── serializers.py     # Serialização de modelos e resultados
-├── settings.py        # Configurações globais do projeto
-├── views.py           # Camada de visualização
-├── requirements.txt   # Dependências do projeto
-├── README.md          # Este arquivo
+├── main.py            # Main ETL execution script
+├── models.py          # Regression and forecast models
+├── save_to_sql.py     # SQL database export
+├── serializers.py     # Model/result serialization
+├── settings.py        # Global configuration
+├── views.py           # Visualization layer
+├── requirements.txt   # Project dependencies
+├── README.md          # This file
 └── LICENSE
-````
+```
 
+## ⚙️ **ETL Pipeline — Extraction, Transformation & Load**
 
-## ⚙️ **Pipeline ETL — Extração, Transformação e Carga**
+> **Author:** Rafael Henrique Gallo
+> **Description:** The `main.py` file automates the entire COVID-19 data pipeline from the Brazilian Ministry of Health.
 
-> **Responsável:** Rafael Henrique Gallo  
-> **Descrição:** O arquivo `main.py` realiza a **automação completa** do fluxo de dados COVID-19 do Ministério da Saúde.
+### 📋 **Main Steps**
 
-### 📋 **Etapas Principais**
-1. Detecta automaticamente o arquivo `.zip` mais recente na pasta de dados;  
-2. Extrai e lê os arquivos `HIST_PAINEL_COVIDBR_*.csv`;  
-3. Realiza limpeza e padronização de colunas e valores ausentes;  
-4. Consolida todos os arquivos em um único CSV:  
-   `COVIDBR_2020_2025_Consolidado.csv`.  
+1. Automatically detects the latest `.zip` file in the data directory;
+2. Extracts and reads all `HIST_PAINEL_COVIDBR_*.csv` files;
+3. Cleans and standardizes columns and missing values;
+4. Consolidates all datasets into a single CSV:
+   `COVIDBR_2020_2025_Consolidado.csv`.
 
-### 🔧 **Execução**
+### 🔧 **Execution**
+
 ```bash
 python main.py
-````
+```
 
-### 🧩 **Fontes de Dados**
+### 🧩 **Data Sources**
 
-* [Portal COVID-19 do Ministério da Saúde](https://covid.saude.gov.br/)
-* [Brasil.io - Casos e Óbitos](https://brasil.io/dataset/covid19/caso_full/)
-* [Our World in Data (Brasil)](https://ourworldindata.org/coronavirus/country/brazil)
+* [Ministry of Health — COVID-19 Portal](https://covid.saude.gov.br/)
+* [Brasil.io - COVID-19 Cases and Deaths](https://brasil.io/dataset/covid19/caso_full/)
+* [Our World in Data (Brazil)](https://ourworldindata.org/coronavirus/country/brazil)
 
-## 🧮 **Principais Funcionalidades**
+## 🧮 **Main Features**
 
-| Categoria                           | Descrição                                                          |
-| ----------------------------------- | ------------------------------------------------------------------ |
-| 🧹 **ETL & Limpeza de Dados**       | Correção de outliers, normalização e integração de fontes.         |
-| 📊 **Visualização Exploratória**    | Gráficos dinâmicos (casos, óbitos, letalidade, mortalidade).       |
-| 🗺️ **Análise Regional e Temporal** | Comparações entre estados, regiões e ondas pandêmicas.             |
-| 📈 **Modelos de Previsão**          | Regressão Polinomial e Logística aplicadas a séries temporais.     |
-| 🧠 **Análise Preditiva**            | Estimativas futuras de casos acumulados e tendência de saturação.  |
-| 🧩 **Dashboard Streamlit**          | Interface visual para análise interativa e relatórios automáticos. |
+| Category                             | Description                                                      |
+| ------------------------------------ | ---------------------------------------------------------------- |
+| 🧹 **ETL & Data Cleaning**           | Outlier correction, normalization, and multi-source integration. |
+| 📊 **Exploratory Visualization**     | Dynamic charts (cases, deaths, lethality, mortality).            |
+| 🗺️ **Regional & Temporal Analysis** | Comparison between states, regions, and pandemic waves.          |
+| 📈 **Forecast Models**               | Polynomial and Logistic Regression applied to time series.       |
+| 🧠 **Predictive Analysis**           | Future estimates of accumulated cases and saturation trends.     |
+| 🧩 **Streamlit Dashboard**           | Interactive interface for analysis and automated reports.        |
 
-## 🚀 **Destaques do Projeto**
+## 🚀 **Project Highlights**
 
-### 🔹 Evolução Nacional — Casos x Óbitos
+### 🔹 National Evolution — Cases vs Deaths
 
 ![Evolução Nacional](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/img/1.png)
 
-### 🔹 Ondas Epidêmicas no Brasil
+### 🔹 Epidemic Waves in Brazil
 
 ![Ondas Epidêmicas](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/img/2.png)
 
-### 🔹 Município de São Paulo
+### 🔹 São Paulo Municipality
 
 ![SP Casos](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/img/3.png)
 
-### 🔹 Casos e Óbitos por Região
+### 🔹 Cases and Deaths by Region
 
 ![Regiões](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/img/4.png)
 
-### 🔹 Tendência Nacional (MM30)
+### 🔹 National Trend (30-day MA)
 
 ![Tendência Nacional](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/img/5.png)
 
-### 🔹 Taxa de Letalidade (% entre Casos Confirmados)
+### 🔹 Lethality Rate (% of Confirmed Cases)
 
 ![Letalidade](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/img/6.png)
 
-### 🔹 Top 10 Estados com Mais Mortes
+### 🔹 Top 10 States by Deaths
 
 ![Top 10 Mortes](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/img/7.png)
 
-### 🔹 Taxa de Mortalidade (População 2019)
+### 🔹 Mortality Rate (2019 Population)
 
 ![Mortalidade](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/img/8.png)
 
-### 🔹 Dashboard Streamlit
+### 🔹 Streamlit Dashboard
 
 ![Dashboard](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/img/9.png)
 
-## 📈 **Modelos de Previsão**
+## 📈 **Forecasting Models**
 
-### 🧮 Regressão Polinomial
+### 🧮 Polynomial Regression (degree p)
 
-Captura a tendência de crescimento e desaceleração dos casos acumulados ao longo do tempo.
+We estimate the trend of **new cases** over time using a polynomial of degree *p*:
+
+$$
+\hat{y}(x) = \sum_{k=0}^{p} \beta_k , x^{k}
+$$
+
+> In this project, (p = 7) is commonly used to smooth the curve and capture curvature without overfitting.
+
+### 🧬 Logistic Growth Model (accumulated cases)
+
+For **accumulated cases or deaths**, we model the S-shaped curve with saturation:
+
+$$
+\hat{Y}(t) = \frac{K}{1 + \exp!\big(-r,(t - t_{0})\big)}
+$$
+
+Where (K) is the **carrying capacity** (plateau), (r) the **growth rate**, and (t_{0}) the **inflection point**.
+
+### 📊 Model Visualizations
+
+#### Polynomial Regression Fit
 
 ![Ajuste Polinomial](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/img/10.png)
 
-### 🔹 **Projeção Futura de Casos (10 Semanas)**
-
-Estimativa de novas infecções com base na regressão polinomial de grau 7.
+#### 10-Week Forecast Projection
 
 ![Previsão Futura](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/img/11.png)
 
-### 🧬 Regressão Logística
-
-Modela a saturação da curva de crescimento (efeito platô de óbitos acumulados).
+#### Logistic Growth — Accumulated Deaths
 
 ![Modelo Logístico](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/img/12.png)
 
-## 📈 Modelos de Previsão
+## 🧠 **Key Insights**
 
-### 🧮 Regressão Polinomial (grau p)
-Estimamos a tendência dos **casos novos** ao longo do tempo com um polinômio de grau *p*:
+* Brazil experienced **5 major epidemic waves**, peaking in **February 2021**;
+* The transition to **endemic status** occurred in **2023**, with case stabilization;
+* The **Southeast and Northeast** regions accounted for over 60% of national cases;
+* **Piauí** had the **highest lethality rate (8.2%)**;
+* Mortality relative to population was highest in **Distrito Federal** and **Roraima**.
 
-$$
-\hat{y}(x) = \sum_{k=0}^{p} \beta_k \, x^{k}
-$$
+## 🖥️ **Technologies Used**
 
-> No projeto, usamos tipicamente \(p=7\) para capturar curvaturas sem sobreajuste excessivo.
-
----
-
-### 🧬 Modelo Logístico (crescimento acumulado)
-Para **casos/óbitos acumulados**, modelamos a curva-S com saturação:
-
-$$
-\hat{Y}(t) = \frac{K}{1 + \exp\!\big(-r\,(t - t_{0})\big)}
-$$
-
-onde \(K\) é a **capacidade de carga** (platô), \(r\) a **taxa de crescimento** e \(t_{0}\) o **ponto de inflexão**.
-
-
-## 🧠 **Insights Principais**
-
-* O Brasil apresentou **5 ondas epidêmicas principais**, com pico máximo em **fev/2021**;
-* A transição para **endemia** ocorre em **2023**, com estabilização de casos;
-* As **regiões Sudeste e Nordeste** concentraram mais de 60% dos casos nacionais;
-* O **Piauí** teve a **maior taxa de letalidade (8,2%)**;
-* A mortalidade proporcional à população foi mais alta no **Distrito Federal** e em **Roraima**.
-
-## 🖥️ **Tecnologias Utilizadas**
-
-| Categoria        | Ferramentas              |
+| Category         | Tools                    |
 | ---------------- | ------------------------ |
-| Linguagem        | Python 3.10              |
+| Language         | Python 3.10              |
 | Data Science     | Pandas, NumPy, SciPy     |
-| Visualização     | Matplotlib, Seaborn      |
+| Visualization    | Matplotlib, Seaborn      |
 | Machine Learning | scikit-learn             |
 | Dashboard        | Streamlit                |
-| Banco de Dados   | SQL                      |
-| Automação        | tqdm, zipfile, glob      |
-| Ambiente         | Docker, Jupyter Notebook |
+| Database         | SQL                      |
+| Automation       | tqdm, zipfile, glob      |
+| Environment      | Docker, Jupyter Notebook |
 
-## 📦 **Instalação e Execução**
+## 📦 **Installation & Execution**
 
 ```bash
-# Clonar o repositório
+# Clone repository
 git clone https://github.com/RafaelGallo/Project_SAS_COV19.git
 cd Project_SAS_COV19
 
-# Instalar dependências
+# Install dependencies
 pip install -r requirements.txt
 
-# Rodar pipeline ETL
+# Run ETL pipeline
 python main.py
 
-# Rodar dashboard interativo
+# Launch interactive dashboard
 streamlit run app/main.py
 ```
-## 📊 **Resultados Esperados**
 
-* Visualizações limpas e consistentes das séries temporais COVID-19 (2020–2025);
-* Painel interativo para análise por região, estado e município;
-* Modelos preditivos realistas e ajustados à série histórica;
-* Exportação de relatórios e gráficos em `.csv` e `.png`.
+## 📊 **Expected Results**
 
-## 🧾 **Citação**
+* Clean and consistent visualizations of COVID-19 time series (2020–2025);
+* Interactive dashboard for analysis by region, state, and municipality;
+* Predictive models aligned with real-world epidemiological behavior;
+* Export reports and visualizations in `.csv` and `.png` formats.
 
-> “Dados oficiais extraídos do [Portal COVID-19 do Ministério da Saúde](https://covid.saude.gov.br/),
-> tratados, consolidados e modelados via pipeline ETL e regressões polinomial/logística
-> desenvolvidas por **Rafael Henrique Gallo (2025)**.”
+## 🧾 **Citation**
 
-## 👨‍💻 **Autor**
+> “Official data extracted from the [COVID-19 Portal of the Brazilian Ministry of Health](https://covid.saude.gov.br/),
+> cleaned, consolidated, and modeled via ETL pipeline and polynomial/logistic regressions
+> developed by **Rafael Henrique Gallo (2025)**.”
+
+## 👨‍💻 **Author**
 
 **Rafael Henrique Gallo**
 
-📍 Cientista de Dados • MBA Data Science & IA — FIAP
+📍 Data Scientist • MBA in Data Science & AI — FIAP
 📧 [rafaelgallo.ds@gmail.com](mailto:rafaelgallo.ds@gmail.com)
 🔗 [LinkedIn](https://www.linkedin.com/in/rafaelhenriquegallo)
 🌐 [Kaggle](https://www.kaggle.com/rafaelgallo)
 
-> 🧩 *“Ciência de Dados é o elo entre informação e decisão.” — Rafael Gallo*
+> 🧩 *“Data Science is the bridge between information and decision.” — Rafael Gallo*
+
