@@ -25,25 +25,25 @@ The project performs:
 
 The goal is to provide an exploratory and predictive view of the pandemic’s behavior in Brazil and its regions — supporting public policy, epidemiological research, and trend analysis.
 
-## 🌍 Extensions & Related Projects
+### 🌍 Extensions & Related Projects
 
 As part of the **analytical ecosystem of Project SAS-COV19**, new modules and complementary studies are being developed, focusing on **time series, vaccination data, adverse effects, and natural language processing (NLP)** related to the global pandemic.
 
-### 🧠 **Expansion Projects**
+### 🧠 **Expansion Projects — SAS-COV19 Global Research Series**
 
-| Category                                           | Description                                                                                   | Dataset Source                                                                                                                       | Project Folder |
-| -------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | -------------- |
-| 💉 **COVID-19 Post Vaccination Statewide Stats**   | Time series analysis and modeling of post-vaccination data (cases, hospitalizations, deaths). | [Kaggle Dataset](https://www.kaggle.com/datasets/tdison/covid19-post-vaccination-statewide-stats)                                    |                |
-| 🧬 **COVID-19 Vaccine Adverse Reactions (World)**  | Temporal study of vaccine adverse reactions by country, age group, and manufacturer.          | [Kaggle Dataset](https://www.kaggle.com/datasets/ayushggarg/covid19-vaccine-adverse-reactions)                                       |                |
-| 🧫 **COVID-19 Vaccination Effects (Impact Study)** | Comparative analysis between vaccination rates and epidemiological indicators.                | [Kaggle Dataset](https://www.kaggle.com/datasets/telikaramu/covid-19-vaccination-effects)                                            |                |
-| 🏙️ **COVID-19 Vaccination in Tiered Cities**      | Time series of vaccination data in cities with different infrastructure levels.               | [Kaggle Dataset](https://www.kaggle.com/datasets/achintsoni/covid19-vaccination-data-for-different-tier-cities)                      |                |
-| 📰 **COVID-19 Fake News Detection (NLP)**          | Automatic classification of misinformation using BERT and LLM-based models.                   | [Kaggle Dataset](https://www.kaggle.com/datasets/elvinagammed/covid19-fake-news-dataset-nlp/code?datasetId=1207011&sortBy=voteCount) |                |
-| 🐦 **Global COVID-19 X (Twitter) Analysis (NLP)**  | Sentiment, topic, and fake news detection in global COVID-19 tweets.                          | [Kaggle Dataset](https://www.kaggle.com/datasets/rohitashchandra/global-covid19-twitter-dataset?select=Brazil.csv)                   |                |
-| 💉 **COVID19 Model Regression**| Polygonal regression model | | [Link_project](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/notebook/modelo_regressao.ipynb)|
-| 💉 **COVID19 time series analysis**|Covid time series analysis||[Link_project](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/notebook/ETL_Analise_dados_covid19.ipynb) |
-| 💉 **COVID19 ETL**|Covid ETL||[Link_project](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/ETL/etl.py)|
+| Category                                           | Description                                                                                                                                    | Dataset / Source                                                                                                                     | Project Link                                                                                                    |
+| -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| 💉 **COVID-19 Post-Vaccination Statewide Stats**   | Time-series modeling and comparative analysis of post-vaccination data by state — including confirmed cases, hospitalizations, and fatalities. | [Kaggle Dataset](https://www.kaggle.com/datasets/tdison/covid19-post-vaccination-statewide-stats)                                    | —                                                                                                               |
+| 🧬 **COVID-19 Vaccine Adverse Reactions (Global)** | Temporal analysis of vaccine-related adverse reactions segmented by country, age group, and manufacturer.                                      | [Kaggle Dataset](https://www.kaggle.com/datasets/ayushggarg/covid19-vaccine-adverse-reactions)                                       | —                                                                                                               |
+| 🧫 **COVID-19 Vaccination Effects (Impact Study)** | Quantitative evaluation of vaccination coverage versus epidemiological indicators such as infection, hospitalization, and mortality rates.     | [Kaggle Dataset](https://www.kaggle.com/datasets/telikaramu/covid-19-vaccination-effects)                                            | —                                                                                                               |
+| 🏙️ **COVID-19 Vaccination in Tiered Cities**      | Longitudinal study of vaccination progress across urban tiers — examining infrastructure disparity and vaccination logistics.                  | [Kaggle Dataset](https://www.kaggle.com/datasets/achintsoni/covid19-vaccination-data-for-different-tier-cities)                      | —                                                                                                               |
+| 📰 **COVID-19 Fake News Detection (NLP)**          | Automatic misinformation detection using transformer-based models (BERT, RoBERTa, and instruction-tuned LLMs).                                 | [Kaggle Dataset](https://www.kaggle.com/datasets/elvinagammed/covid19-fake-news-dataset-nlp/code?datasetId=1207011&sortBy=voteCount) | —                                                                                                               |
+| 🐦 **Global COVID-19 X (Twitter) Analysis (NLP)**  | Large-scale text mining of global tweets to analyze sentiment, discourse dynamics, and misinformation propagation.                             | [Kaggle Dataset](https://www.kaggle.com/datasets/rohitashchandra/global-covid19-twitter-dataset?select=Brazil.csv)                   | —                                                                                                               |
+| 📈 **COVID-19 Regression Modeling (Brazil)**       | Development of polynomial and logistic regression models to estimate national case growth and saturation levels.                               | —                                                                                                                                    | [Notebook](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/notebook/modelo_regressao.ipynb)          |
+| ⏱️ **COVID-19 Time-Series Analysis**               | Exploratory data analysis and visualization of national case and death trends (2020-2025) using Pandas and Matplotlib.                         | —                                                                                                                                    | [Notebook](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/notebook/ETL_Analise_dados_covid19.ipynb) |
+| ⚙️ **COVID-19 ETL Automation Pipeline**            | End-to-end extraction, transformation, and data consolidation from the Ministry of Health public database.                                     | —                                                                                                                                    | [ETL Script](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/ETL/etl.py)                             |
 
-> 🔗 These modules are part of the **“SAS-COV19 Global Analysis”** series, integrating epidemiological, behavioral, and media data to understand the direct and indirect impacts of the pandemic worldwide.
+> 🧩 These projects compose the **SAS-COV19 Global Research Suite**, connecting epidemiological, behavioral, and language data to model the pandemic’s evolution and communication impact across multiple domains.
 
 ## 🌐 Next Steps
 
@@ -254,5 +254,6 @@ streamlit run app/main.py
 🌐 [Kaggle](https://www.kaggle.com/rafaelgallo)
 
 > 🧩 *“Data Science is the bridge between information and decision.” — Rafael Gallo*
+
 
 
