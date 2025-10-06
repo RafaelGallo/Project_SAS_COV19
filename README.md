@@ -39,6 +39,9 @@ As part of the **analytical ecosystem of Project SAS-COV19**, new modules and co
 | 🏙️ **COVID-19 Vaccination in Tiered Cities**      | Time series of vaccination data in cities with different infrastructure levels.               | [Kaggle Dataset](https://www.kaggle.com/datasets/achintsoni/covid19-vaccination-data-for-different-tier-cities)                      |                |
 | 📰 **COVID-19 Fake News Detection (NLP)**          | Automatic classification of misinformation using BERT and LLM-based models.                   | [Kaggle Dataset](https://www.kaggle.com/datasets/elvinagammed/covid19-fake-news-dataset-nlp/code?datasetId=1207011&sortBy=voteCount) |                |
 | 🐦 **Global COVID-19 X (Twitter) Analysis (NLP)**  | Sentiment, topic, and fake news detection in global COVID-19 tweets.                          | [Kaggle Dataset](https://www.kaggle.com/datasets/rohitashchandra/global-covid19-twitter-dataset?select=Brazil.csv)                   |                |
+| 💉 **COVID19 Model Regression**| Polygonal regression model | | [Link_project](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/notebook/modelo_regressao.ipynb)|
+| 💉 **COVID19 time series analysis**|Covid time series analysis||[Link_project](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/notebook/ETL_Analise_dados_covid19.ipynb) |
+| 💉 **COVID19 ETL**|Covid ETL||[Link_project](https://github.com/RafaelGallo/Project_SAS_COV19/blob/main/ETL/etl.py)|
 
 > 🔗 These modules are part of the **“SAS-COV19 Global Analysis”** series, integrating epidemiological, behavioral, and media data to understand the direct and indirect impacts of the pandemic worldwide.
 
@@ -251,4 +254,5 @@ streamlit run app/main.py
 🌐 [Kaggle](https://www.kaggle.com/rafaelgallo)
 
 > 🧩 *“Data Science is the bridge between information and decision.” — Rafael Gallo*
+
 
